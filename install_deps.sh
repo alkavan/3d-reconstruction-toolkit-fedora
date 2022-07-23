@@ -13,7 +13,7 @@ sudo dnf install cmake git gcc-c++ wget unzip \
 
 echo "Installing build dependencies for OpenMVG ..."
 sudo dnf install  libXxf86vm-devel libXi-devel libXrandr-devel \
-  qt5-qtbase-devel qt5-qtsvg-devel  flann-devel coin-or-lemon-devel coin-or-Clp-devel cereal-devel
+  qt5-qtbase-devel qt5-qtsvg-devel flann-devel coin-or-lemon-devel coin-or-Clp-devel cereal-devel
 
 echo "Installing build dependencies for OpenMVS ..."
 sudo dnf install libtiff-devel opencv-devel CGAL-devel CGAL-qt5-devel glfw-devel glew-devel

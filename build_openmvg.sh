@@ -4,7 +4,7 @@ OPENMVG_VERSION="2.0"
 
 if [[ -d "build-openmvg" ]]
 then
-  echo "error: build directory already exists (run ./clean_deps.sh to clean it)"
+  echo "error: build directory already exists (run ./clean_build.sh to clean it)"
   exit 1
 fi
 

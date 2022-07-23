@@ -15,7 +15,7 @@ if ! [ -d "third_party/openMVG-${OPENMVG_VERSION}" ]; then
     "third_party/openMVG-${OPENMVG_VERSION}/src/dependencies/cereal"
 fi
 
-OPENMVS_VERSION="2.0"
+OPENMVS_VERSION="2.0.1"
 
 if ! [ -d "third_party/openMVS-${OPENMVS_VERSION}" ]; then
   echo "Downloading openMVS-${OPENMVS_VERSION} ..."
@@ -39,4 +39,27 @@ if ! [ -d "third_party/boost_1_76_0" ]; then
 
   unzip -d third_party/ third_party/boost_1_76_0.zip
   rm third_party/boost_1_76_0.zip
+fi
+
+#OPENCV_VERSION="4.6.0"
+OPENCV_VERSION="3.4.18"
+
+if ! [ -d "third_party/opencv-${OPENCV_VERSION}" ]; then
+  echo "Downloading opencv-${OPENCV_VERSION} ..."
+
+  wget https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip \
+    -O "third_party/opencv-${OPENCV_VERSION}.zip"
+
+  unzip -d third_party/ third_party/opencv-${OPENCV_VERSION}.zip
+  rm third_party/opencv-${OPENCV_VERSION}.zip
+fi
+
+if ! [ -d "third_party/opencv_contrib-${OPENCV_VERSION}" ]; then
+  echo "Downloading opencv_contrib-${OPENCV_VERSION} ..."
+
+  wget https://github.com/opencv/opencv_contrib/archive/${OPENCV_VERSION}.zip \
+    -O "third_party/opencv_contrib-${OPENCV_VERSION}.zip"
+
+  unzip -d third_party/ third_party/opencv_contrib-${OPENCV_VERSION}.zip
+  rm third_party/opencv_contrib-${OPENCV_VERSION}.zip
 fi
